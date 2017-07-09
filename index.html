@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/flatpickr.css">
+        <title>Calendar</title>
+    </head>
+    <body>
+    <script id="entry-template" type="x-tmpl-mustache">
+    {{#list}}
+        <div class="group-list">
+            <span class="namber-date">День {{count}}</span>
+            <span class="description">
+                <textarea name="description">{{description}}</textarea>
+            </span>
+            <span class="date">
+                <input type="text" name="datepicker" class='datepicker' value="{{datepicker}}"/>
+            </span>
+            <span class='add'><i class="fa fa-times" aria-hidden="true"></i></span>
+            <span class='remove'><i class="fa fa-plus" aria-hidden="true"></i></span>
+        </div>
+     {{/list}}   
+    </script>
+        <form id='entry'></form>
+
+        <script type="text/javascript" src="js/mustache.min.js"></script>
+        <script type="text/javascript" src="js/serialize.min.js"></script>
+        <script type="text/javascript" src="js/flatpickr.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+</html>
